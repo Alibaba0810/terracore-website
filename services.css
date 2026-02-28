@@ -1,0 +1,780 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	/* background-color: #e9ecef; */
+	color: var(--fg);
+	font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	overflow-x: hidden;
+}
+
+/* ----- Header ----- */
+header {
+	width: 100%;
+	background-color: white;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	position: sticky;
+    top: 0;
+    z-index: 2000;
+	height: 12vh;
+}
+
+header h1 {
+	width: 15%;
+	text-align: left;
+}
+
+header h1 img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+header a {
+	text-decoration: none;
+	color: black;
+}
+
+nav {
+	width: 70%;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+nav .menu-list {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+	flex-wrap: nowrap;
+	gap: 10px;
+	overflow: hidden;
+}
+
+nav li {
+	display: block;
+	font-size: 21px;
+	font-weight: 530;
+	white-space: nowrap;
+}
+
+nav li a:hover {
+	color: #27ae60;
+}
+
+:root {
+	--bg: #fff;
+	--fg: #0b0b0b;
+	--accent: #27ae60;
+	--muted: #6b7280;
+	--sidebar-width: 300px;
+	--transition: 300ms;
+	--easing: cubic-bezier(.2, .9, .2, 1);
+	/* Carousel visual tuning */
+	--carousel-blur: 2px;
+	--carousel-scale: 1.03;
+	--carousel-overlay: rgba(0, 0, 0, 0.35);
+}
+
+.menu-bar {
+	display: none;
+	font-size: 28px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	color: var(--fg);
+}
+
+/* Modern slide-in sidebar using transform so transitions work smoothly */
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: var(--sidebar-width);
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	padding: 24px;
+	gap: 16px;
+	z-index: 1200;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(250, 250, 250, 0.95));
+	transform: translateX(110%);
+	transition: transform var(--transition) ease, opacity var(--transition) ease;
+	box-shadow: -8px 0 24px rgba(9, 10, 10, 0.12);
+	backdrop-filter: blur(6px);
+}
+
+.sidebar.open {
+	transform: translateX(0);
+}
+
+.sidebar-list {
+	list-style: none;
+	padding: 0;
+	margin: 16px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.sidebar a {
+	color: var(--fg);
+	text-decoration: none;
+	font-weight: 600;
+	padding: 8px 6px;
+	border-radius: 8px;
+}
+
+.sidebar a:hover {
+	background: rgba(39, 174, 96, 0.08);
+	color: var(--accent);
+}
+
+.close-btn {
+	align-self: flex-end;
+	font-size: 22px;
+	cursor: pointer;
+	border: none;
+	background: transparent;
+	color: var(--muted);
+}
+
+
+/* overlay when sidebar is open */
+.overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: 1100;
+	opacity: 0;
+	transition: opacity var(--transition) ease;
+	pointer-events: none;
+}
+
+.overlay.visible {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.page-wrap {
+	max-width: 1200px;
+	margin: 28px auto;
+	padding: 0 18px;
+}
+
+/* reveal helper for scroll animations */
+.reveal {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 640ms var(--easing), transform 640ms var(--easing);
+	will-change: opacity, transform;
+}
+
+.reveal.visible {
+	opacity: 1;
+	transform: none;
+}
+
+/* card hover transitions */
+.property-details article,
+.build-details article,
+.review-wrapper {
+	transition: transform 360ms var(--easing), box-shadow 360ms var(--easing), opacity 360ms var(--easing);
+}
+
+.property-details article:hover,
+.build-details article:hover,
+.review-wrapper:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 18px 40px rgba(2, 6, 20, 0.12);
+}
+
+/* subtle image modal (lightbox) */
+.img-modal {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.85);
+	z-index: 1400;
+	padding: 24px;
+}
+
+.img-modal img {
+	max-width: 95%;
+	max-height: 90vh;
+	border-radius: 8px;
+	box-shadow: 0 18px 60px rgba(0, 0, 0, 0.6)
+}
+
+.img-modal .close-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 22px;
+	color: #fff;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+
+
+
+/* Carousel */
+.carousel {
+	position: relative;
+	overflow: hidden;
+	border-radius: 12px;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 300ms ease;
+	transform: translateX(0);
+}
+
+.carousel-item {
+	min-width: 100%;
+	position: relative;
+}
+
+.carousel-item img {
+	width: 100%;
+	height: 44vh;
+	object-fit: cover;
+	display: block;
+}
+
+.carousel-item figcaption {
+	position: absolute;
+	left: 6%;
+	bottom: 10%;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.28);
+	padding: 16px;
+	border-radius: 8px;
+	max-width: 52%;
+	transition: opacity 360ms cubic-bezier(.2, .9, .2, 1), transform 360ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.carousel-item figcaption:hover {
+	opacity: 1;
+	transform: translateY(-4px);
+}
+
+.carousel-prev,
+.carousel-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.45);
+	border: none;
+	color: #fff;
+	padding: 10px 12px;
+	font-size: 22px;
+	border-radius: 8px;
+	cursor: pointer
+}
+
+.carousel-prev {
+	left: 12px;
+}
+
+.carousel-next {
+	right: 12px;
+}
+
+/* Reset and base styles */
+
+
+/* ----- Carousel / Hero ----- */
+.carousel-section {
+	width: 100%;
+	/* default: full width slides; add class `narrow` to use 80% centered */
+	max-width: 100%;
+	/* margin: 40px auto; */
+	position: relative;
+	overflow: hidden;
+	border-radius: 12px;
+}
+
+/* dark overlay for better contrast over hero images */
+.carousel-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.15), var(--carousel-overlay));
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* Each slide — position absolute for smooth fades */
+.carousel-container {
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	overflow: hidden;
+}
+
+.carousel-section.narrow .carousel-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.carousel-slide {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 900ms var(--easing), transform 900ms var(--easing);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+
+}
+
+.carousel-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	/* use variables so blur/scale can be toggled */
+	filter: blur(var(--carousel-blur));
+	transform: scale(var(--carousel-scale));
+	transition: filter 300ms var(--easing), transform 300ms var(--easing);
+}
+
+
+.carousel-slide.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 2;
+}
+
+/* reduce jump when slide changes */
+.carousel-slide:not(.active) {
+	pointer-events: none
+}
+
+
+/* Fade animation */
+.carousel-text {
+	position: absolute;
+	bottom: 16%;
+	left: 6%;
+	text-align: left;
+	max-width: 60%;
+	width: calc(60% - 40px);
+	z-index: 3;
+	color: #fff;
+	padding: 12px 20px;
+	opacity: 0;
+	transform: translateY(14px);
+	transition: opacity 600ms var(--easing), transform 600ms var(--easing);
+	backdrop-filter: blur(2px);
+	background: rgba(0, 0, 0, 0.18);
+	border-radius: 8px;
+}
+
+
+
+.services-section {
+	margin: 34px 0;
+}
+
+
+
+.section-head small {
+	display: block;
+	color: var(--accent);
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.section-head h2 {
+	margin: 6px 0 18px;
+	font-size: 28px;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 18px;
+}
+
+.card {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 0px 5px 0px green;
+	display: flex;
+	flex-direction: column;
+	transition: transform 360ms cubic-bezier(.2, .9, .2, 1), box-shadow 360ms cubic-bezier(.2, .9, .2, 1), opacity 360ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 18px 40px rgba(2, 6, 20, 0.12);
+}
+
+.card img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	transition: transform 360ms cubic-bezier(.2, .9, .2, 1), filter 300ms cubic-bezier(.2, .9, .2, 1);
+}
+
+.card:hover img {
+	transform: scale(1.03);
+	filter: brightness(0.98);
+}
+
+.card-body {
+	padding: 14px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.card-body h3 {
+	margin: 0 0 8px;
+	font-size: 18px;
+}
+
+.card-body p {
+	flex: 1;
+	margin: 0 0 8px;
+	color: var(--muted);
+}
+
+.card-body .meta {
+	font-weight: 700;
+	color: var(--fg);
+	margin-bottom: 8px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 14px;
+	border-radius: 10px;
+	background: var(--accent);
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	transition: transform 220ms cubic-bezier(.2, .9, .2, 1), box-shadow 220ms cubic-bezier(.2, .9, .2, 1), opacity 220ms cubic-bezier(.2, .9, .2, 1)
+}
+
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 12px 30px rgba(2, 6, 20, 0.08)
+}
+
+.btn.learn {
+	background: linear-gradient(90deg, var(--accent), #1f8f45)
+}
+
+
+
+/* WhatsApp floating */
+.whatsapp-float {
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	background: #25D366;
+	color: #fff;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 26px;
+	box-shadow: 0px 0px 5px 0px green;
+	text-decoration: none
+}
+
+
+
+/* ----- Footer ----- */
+.site-footer {
+	background: #0b0b0b;
+	color: #fff;
+	padding: 40px 20px 20px;
+	/* Use full width without causing horizontal overflow */
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.footer-inner {
+	width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 48px;
+	align-items: start;
+	box-sizing: border-box;
+}
+
+/* ensure columns stack contents vertically and space nicely */
+.footer-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.footer-col:not(:last-child) {
+	padding-right: 12px;
+}
+
+.footer-col:last-child {
+	padding-left: 12px;
+}
+
+.footer-logo {
+	filter: brightness(10) invert(1);
+	margin-bottom: 8px;
+}
+
+.footer-col h4 {
+	margin-bottom: 8px;
+}
+
+.footer-col p {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+/* footer column alignment: left / center / right */
+.footer-col:first-child {
+	text-align: left;
+}
+
+.footer-col:nth-child(2) {
+	text-align: left;
+	padding-left: 110px;
+}
+
+.footer-col:last-child {
+	text-align: right;
+}
+
+.footer-col {
+	font-size: 16px;
+}
+
+.footer-col ul li {
+	font-size: 16px;
+}
+
+/* center the footer bottom text */
+.footer-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 18px;
+	border-top: 1px solid rgba(255, 255, 255, 0.04);
+	margin-top: 18px;
+}
+
+.footer-bottom p {
+	text-align: center;
+	margin: 0;
+}
+
+.footer-col ul {
+	list-style: none;
+	padding: 0
+}
+
+.footer-col ul li {
+	margin: 8px 0;
+}
+
+.footer-col a {
+	color: rgba(255, 255, 255, 0.85);
+	text-decoration: none;
+}
+
+.footer-col a:hover {
+	color: var(--accent);
+}
+
+.newsletter-form {
+	display: flex;
+	gap: 8px;
+	margin-top: 8px;
+}
+
+
+.newsletter-form input {
+	flex: 1;
+	padding: 8px;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	background: transparent;
+	color: #fff;
+}
+
+.newsletter-form .btn {
+	background: var(--accent);
+	color: #fff;
+	border-radius: 8px;
+}
+
+.social {
+	margin-top: 12px;
+	display: flex;
+	gap: 10px;
+}
+
+.social a {
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 18px;
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 18px;
+	border-top: 1px solid rgba(255, 255, 255, 0.04);
+	margin-top: 18px;
+}
+
+.theme-toggle {
+	display: flex;
+	gap: 8px;
+	/* margin-top: 12px; */
+	/* align-items: center; */
+}
+
+.theme-toggle .btn i {
+	font-size: 14px;
+}
+
+.theme-toggle .btn {
+	margin-left: 6px;
+}
+
+.theme-toggle button{
+    background-color: #27ae60;
+    color: #e5e7eb;
+}
+/* Dark mode overrides */
+
+.dark {
+	background-color: #090909;
+	color: #ffffff;
+}
+
+.dark .card {
+	background: #1e1e1e;
+	color: #ffffff;
+	box-shadow: 0px 0px 5px 0px rgba(0, 255, 0, 0.3);
+}
+
+.dark .card:hover {
+	box-shadow: 0 18px 40px rgba(0, 6, 20, 0.3);
+}
+
+.dark .card-body h3 {
+	color: #ffffff;
+}
+
+.dark .card-body p {
+	color: #cccccc;
+}
+
+.dark .card-body .meta {
+	color: #ffffff;
+}
+
+.dark header {
+	background-color: #121212;
+	color: #ffffff;
+}
+
+.dark header a {
+	color: #ffffff;
+}
+
+.dark nav li a:hover {
+	color: #27ae60;
+}
+
+.dark .sidebar {
+	background: linear-gradient(180deg, rgba(30, 30, 30, 0.95), rgba(40, 40, 40, 0.95));
+}
+
+.dark .sidebar a {
+	color: #ffffff;
+}
+
+.dark .sidebar a:hover {
+	background: rgba(39, 174, 96, 0.08);
+	color: #27ae60;
+}
+
+.dark .close-btn {
+	color: #cccccc;
+}
+
+.dark .overlay {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode for services sections */
+.dark .services-section {
+	background-color: #121212;
+}
+
+.dark .section-head small {
+	color: #27ae60;
+}
+
+.dark .section-head h2 {
+	color: #ffffff;
+}
+
+.dark .contact-section {
+	background-color: #121212;
+}
+
+.dark .contact-section h2 {
+	color: #ffffff;
+}
+
+.dark .contact-section p {
+	color: #cccccc;
+}
+
+/* Dark mode for carousel */
+.dark .carousel-item figcaption {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.dark .carousel-prev,
+.dark .carousel-next {
+	background: rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode for WhatsApp float */
+.dark .whatsapp-float {
+	box-shadow: 0px 0px 10px 0px rgba(37, 211, 102, 0.5);
+}

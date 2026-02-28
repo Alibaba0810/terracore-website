@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Services — Terracore Solutions</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="servicesQuery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="dark">
+    <header>
+        <h1>
+            <img src="img/favicon.png" alt="" width="180" height="85">
+        </h1>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="property.html">Properties</a></li>
+                <li><a href="building-materials.html">Building materials</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+
+        </nav>
+
+        <button class="menu-bar" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <aside id="sidebar" class="sidebar" role="navigation" aria-hidden="true">
+            <button class="close-btn" id="sidebarClose" aria-label="Close menu">
+                <i class="fa fa-times"></i>
+            </button>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="property.html">Properties</a></li>
+                <li><a href="building-materials.html">Building materials</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </aside>
+        <div id="overlay" class="overlay" hidden></div>
+    </header>
+
+    <main class="page-wrap">
+        <!-- Featured carousel -->
+        <section class="hero">
+            <div class="carousel" id="heroCarousel">
+                <div class="carousel-track">
+                    <figure class="carousel-item">
+                        <img src="img/property3.png" alt="Land Surveying">
+                        <figcaption>
+                            <h2>Land Surveying Services</h2>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20land%20surveying%20services"
+                                target="_blank" rel="noopener">Learn more
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel-item">
+                        <img src="img/shops.jpg" alt="Property Development">
+                        <figcaption>
+                            <h2>Property Development</h2>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20property%20development"
+                                target="_blank" rel="noopener">Learn more
+                            </a>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel-item">
+                        <img src="img/sideview.jpg" alt="Building Materials Supply">
+                        <figcaption>
+                            <h2>Building Materials Supply</h2>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20building%20materials%20supply"
+                                target="_blank" rel="noopener">Learn more
+                            </a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <button class="carousel-prev" aria-label="Previous">‹</button>
+                <button class="carousel-next" aria-label="Next">›</button>
+            </div>
+        </section>
+
+        <!-- Section 1: Land Surveying -->
+        <section class="services-section" id="surveying">
+            <header class="section-head">
+                <small>Surveying</small>
+                <h2>Land Surveying Services</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/house1.png" alt="Land Surveying">
+                    <div class="card-body">
+                        <h3>Boundary Surveying</h3>
+                        <p>Accurate mapping and demarcation of land boundaries.</p>
+                        <div class="meta">Starting from N50,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20boundary%20surveying"
+                            target="_blank" rel="noopener">Learn more
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/house2.png" alt="Topographic Survey">
+                    <div class="card-body">
+                        <h3>Topographic Surveying</h3>
+                        <p>Detailed mapping of land features and elevations.</p>
+                        <div class="meta">Starting from N100,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20topographic%20surveying"
+                            target="_blank" rel="noopener">Learn more
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/property3.png" alt="Beacon Placement">
+                    <div class="card-body">
+                        <h3>Beacon Placement</h3>
+                        <p>Installation of survey beacons for land demarcation.</p>
+                        <div class="meta">Starting from N20,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20beacon%20placement"
+                            target="_blank" rel="noopener">Learn more
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Property Development -->
+        <section class="services-section" id="development">
+            <header class="section-head">
+                <small>Development</small>
+                <h2>Property Development Services</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/house2.png" alt="Estate Development">
+                    <div class="card-body">
+                        <h3>Estate Development</h3>
+                        <p>Planning and construction of residential estates.</p>
+                        <div class="meta">Contact for pricing</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20estate%20development"
+                            target="_blank" rel="noopener">Learn more
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/house1.png" alt="Building Construction">
+                    <div class="card-body">
+                        <h3>Building Construction</h3>
+                        <p>Construction of residential and commercial buildings.</p>
+                        <div class="meta">Contact for pricing</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20building%20construction"
+                            target="_blank" rel="noopener">Learn more
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/IMG-20250113-WA0001.jpg" alt="Renovation">
+                    <div class="card-body">
+                        <h3>Renovation Services</h3>
+                        <p>Renovation and refurbishment of existing properties.</p>
+                        <div class="meta">Contact for pricing</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20renovation%20services"
+                            target="_blank" rel="noopener">Learn more
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: Building Materials Supply -->
+        <section class="services-section" id="materials">
+            <header class="section-head">
+                <small>Supply</small>
+                <h2>Building Materials Supply</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/shops.jpg" alt="Cement Supply">
+                    <div class="card-body">
+                        <h3>Cement & Aggregates</h3>
+                        <p>Supply of high-quality cement, sand, and gravel.</p>
+                        <div class="meta">Bulk discounts available</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20cement%20supply"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/house2.png" alt="Bricks & Blocks">
+                    <div class="card-body">
+                        <h3>Doors and Lightings</h3>
+                        <p>Supply of luxury Doors,Lights and related materials.</p>
+                        <div class="meta">Various sizes available</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20bricks%20and%20blocks"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="img/logo.png" alt="Roofing Materials">
+                    <div class="card-body">
+                        <h3>Roofing & Plumbing</h3>
+                        <p>Supply of roofing sheets, gutters, pipes, and fittings.</p>
+                        <div class="meta">Complete roofing solutions</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20roofing%20materials"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <!-- <article class="card">
+                    <img src="img/house1.png" alt="Electrical Materials">
+                    <div class="card-body">
+                        <h3>Electrical Materials</h3>
+                        <p>Supply of wiring, switches, sockets, and lighting.</p>
+                        <div class="meta">Energy-efficient options</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20electrical%20materials"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article> -->
+            </div>
+        </section>
+
+        <!-- Contact anchor -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Eloke</h2>
+            <p>Questions about any service? Use the WhatsApp button to start a chat immediately.</p>
+        </section>
+    </main>
+
+    <!-- footer (copied from index.html for consistent site footer) -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col about">
+                <img src="img/favicon.png" alt="Eloke logo" class="footer-logo" width="120">
+                <p>Terracore Solutions — secure land and property solutions, building
+                    value and creating opportunities across Nigeria.</p>
+            </div>
+
+            <div class="footer-col links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="property.html">Properties</a></li>
+                    <li><a href="building-materials.html">Building materials</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle" aria-hidden="false">
+                    <button id="btnDark" class="btn small" aria-label="Dark theme"><i
+                            class="fa-solid fa-moon"></i></button>
+                    <button id="btnLight" class="btn small" aria-label="Light theme"><i
+                            class="fa-solid fa-sun"></i></button>
+                </div>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h4>Newsletter</h4>
+                <p>Get updates on new services and offers.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="nl-email" placeholder="Your email" required>
+                    <button class="btn small" type="submit">Subscribe</button>
+                </form>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <p>&copy; <span id="year"></span> Eloke Multi-Purpose Cooperative Society. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <!-- theme buttons moved under Quick Links -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp contact -->
+    <a class="whatsapp-float"
+        href="https://wa.me/2348148742229?text=Hello%20Terracore%2C%20I%27d%20like%20to%20inquire%20about%20your%20services"
+        target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

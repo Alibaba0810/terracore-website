@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraCore Solutions </title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mainQuery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body id="body">
+    <main>
+
+        <header>
+            <h1>
+                <img src="img/favicon.png" alt="" width="180" height="85">
+            </h1>
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="property.html">Properties</a></li>
+                    <li><a href="building-materials.html">Building materials</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                </ul>
+
+            </nav>
+
+            <button class="menu-bar" id="menuToggle" aria-controls="sidebar" aria-expanded="false"
+                aria-label="Open menu">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <aside id="sidebar" class="sidebar" role="navigation" aria-hidden="true">
+                <button class="close-btn" id="sidebarClose" aria-label="Close menu">
+                    <i class="fa fa-times"></i>
+                </button>
+                <ul class="sidebar-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="property.html">Properties</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="building-materials.html">Building materials</a></li>
+                    <li><a href="#contact">Contact us</a></li>
+                </ul>
+            </aside>
+            <div id="overlay" class="overlay" hidden></div>
+        </header>
+        <section class="hero-section">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="vid/Terracore.mp4" type="video/mp4">
+            </video>
+
+            <!-- Ambient Luxury Sound -->
+            <audio id="ambientSound" loop>
+                <source src="audio/background music.mp3" type="audio/mp3">
+            </audio>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h2 id="typed-title"></h2>
+                <p id="typed-subtitle"></p>
+                <span class="tagline" id="typed-tagline"></span>
+            </div>
+        </section>
+
+
+        <!-- <section class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-slide fade">
+                    <img src="img/sideview.jpg" alt="Property 1" width="200" height="100">
+                    <div class="carousel-text">
+                        <h2>
+                            Welcome to <br>
+                            <span style="color: rgb(11, 225, 11);">TERRACORE</span><br>
+                            <span>SOLUTIONS </span>
+                        </h2>
+
+                        <p> Secure Land &amp; Property Solutions You Can Trust</p>
+
+
+                        <span class="tagline">Building Value • Creating Opportunities</span>
+                    </div>
+
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="img/shops.jpg" alt="Property 2">
+                    <div class="carousel-text">
+                        <h2>Bringing <span> Global Perspective</span> and Expertise to Local Service</h2>
+                        <p>Secure Land & Property Deals</p>
+                        <span>ELOKE Multi-Purpose Cooperative</span>
+                    </div>
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="img/property3.png" alt="Property 3">
+                </div>
+                <div class="carousel-slide fade">
+                    <img src="img/ChatGPT Image Jan 22, 2026, 02_07_01 PM.png" alt="Property 3">
+                </div>
+             
+            </div>
+        </section> -->
+        <!-- <section class="carousel-section">
+            <div class="carousel-container">
+
+                <div class="carousel-slide active">
+
+                    <video class="hero-video" autoplay muted loop playsinline>
+                        <source src="vid/House Video 1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="carousel-text visible">
+                        <h2>
+                            Welcome to <br>
+                            <span style="color: rgb(11, 225, 11);">TERRACORE</span><br>
+                            <span>SOLUTIONS</span>
+                        </h2>
+
+                        <p>Secure Land & Property Solutions You Can Trust</p>
+                        <span class="tagline">Building Value • Creating Opportunities</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section> -->
+        <!-- <section class="carousel-section">
+            <div class="carousel-container">
+
+                <div class="carousel-slide active">
+
+                    <video class="hero-video" autoplay muted loop playsinline>
+                        <source src="vid/House Video 1.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="carousel-text">
+                        <h2 id="typed-title"></h2>
+                        <p id="typed-subtitle"></p>
+                        <span class="tagline" id="typed-tagline"></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section> -->
+
+
+        <section class="about">
+            <article class="left">
+                <small>
+                    Who we are
+                </small>
+                <p>
+                    At TERRACORE SOLUTIONS
+                </p>
+            </article>
+            <article class="right">
+                <p>
+                    we are dedicated to providing secure land and property solutions that empower our clients to build
+                    value and create opportunities across Nigeria. With a deep understanding of the real estate market
+                    and a commitment to excellence, we strive to be your trusted partner in navigating the complexities
+                    of land acquisition, property management, and real estate investment. Our team of experts is
+                    passionate about delivering innovative solutions that meet the unique needs of our clients, ensuring
+                    that every transaction is seamless, transparent, and successful.
+                </p>
+                <button class="readmore">
+                    <a href="about.html">Read more about us</a>
+                </button>
+            </article>
+        </section>
+
+        <section class="properties">
+            <article class="property-head">
+                <small>
+                    Featured Properties
+                </small>
+                <h2>
+                    Discover our Featured Properties
+                </h2>
+            </article>
+
+            <section class="property-details">
+                <article>
+                    <div class="property-img slider">
+
+                        <div class="slides">
+                            <img src="img/house1.png" class="active" alt="">
+                            <img src="img/property3.png" alt="">
+                            <img src="img/house2.png" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="property-title">
+
+                        Blossom Gardens
+
+                    </div>
+                    <div class="property-bio">
+
+                        Government allocation , Tarred road access ,Heavily gated with Security, solar powered
+
+                    </div>
+                    <div class="property-geo">
+
+                        <div class="location"><i class="fa-solid fa-location-dot "></i> <span>transekulu,Enugu</span>
+                        </div>
+                        <div class="sqm">500 sq.meters
+                        </div>
+
+                    </div>
+                    <div class="property-bill">
+
+                        <div class="price">
+                            N10,000,000
+                        </div>
+                        <div class="view">
+                            <a href="property.html">View Property</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <div class="property-img slider">
+
+                        <div class="slides">
+                            <img src="img/house1.png" class="active" alt="">
+                            <img src="img/property3.png" alt="">
+                            <img src="img/house2.png" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="property-title">
+
+                        Harmony Estate
+
+                    </div>
+                    <div class="property-bio">
+
+                        government allocation , tarred road access , 24/7 light , serene environment, close to shopping malls and schools
+
+                    </div>
+                    <div class="property-geo">
+
+                        <div class="location"><i class="fa-solid fa-location-dot "></i> <span>Nike-lake
+                                road,Enugu</span>
+                        </div>
+                        <div class="sqm">500 sq. meters
+                        </div>
+
+                    </div>
+                    <div class="property-bill">
+
+                        <div class="price">
+                            N20,000,000
+                        </div>
+                        <div class="view">
+                            <a href="">View Property</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <div class="property-img slider">
+
+                        <div class="slides">
+                            <img src="img/house1.png" class="active" alt="">
+                            <img src="img/property3.png" alt="">
+                            <img src="img/house2.png" alt="">
+
+                        </div>
+
+                    </div>
+                    <div class="property-title">
+
+                        Agbogazi Nike
+
+                    </div>
+                    <div class="property-bio">
+
+                        Government layout , under-developed , Tarred road access , close to uqwuogo market
+
+                    </div>
+                    <div class="property-geo">
+
+                        <div class="location"><i class="fa-solid fa-location-dot "></i> <span>nike,Enugu</span>
+                        </div>
+                        <div class="sqm">500 sq. meters
+                        </div>
+
+                    </div>
+                    <div class="property-bill">
+
+                        <div class="price">
+                            N1,000,000
+                        </div>
+                        <div class="view">
+                            <a href="">View Property</a>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+
+            <section class="property-details">
+                <article>
+                    <div class="property-img slider">
+
+                        <div class="slides">
+                            <img src="img/LOGO.png" class="active" alt="">
+                            <img src="img/house1.png" alt="">
+
+
+                        </div>
+
+                    </div>
+                    <div class="property-title">
+
+                        Apartments
+
+                    </div>
+                    <div class="property-bio">
+
+                        duplexs , bungalows , bed-sitters for rent
+
+                    </div>
+                    <div class="property-geo">
+
+                        <div class="location"><i class="fa-solid fa-location-dot "></i> <span>indepence,Enugu</span>
+                        </div>
+                        <div class="sqm">500 sq. meters
+                        </div>
+
+                    </div>
+                    <div class="property-bill">
+
+                        <div class="price">
+                            N3,000,000
+                        </div>
+                        <div class="view">
+                            <a href="">View Property</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <div class="property-img slider">
+
+                        <div class="slides">
+                            <img src="img/LOGO.png" class="active" alt="">
+                            <img src="img/Sideview-updated.jpg" alt="">
+
+                        </div>
+
+                    </div>
+                    <div class="property-title">
+
+                        Offices
+
+                    </div>
+                    <div class="property-bio">
+
+                        large office spaces available for rent
+
+                    </div>
+                    <div class="property-geo">
+
+                        <div class="location"><i class="fa-solid fa-location-dot "></i> <span>transekulu,Enugu</span>
+                        </div>
+                        <div class="sqm">600 sq. meters
+                        </div>
+
+                    </div>
+                    <div class="property-bill">
+
+                        <div class="price">
+                            N800,000
+                        </div>
+                        <div class="view">
+                            <a href="">View Property</a>
+                        </div>
+
+                    </div>
+                </article>
+
+                <article>
+                    <div class="property-img slider">
+
+                        <div class="slides">
+                            <img src="img/LOGO.png" class="active" alt="">
+                            <img src="img/shops.jpeg" alt="">
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="property-title">
+
+                        Shops
+
+                    </div>
+                    <div class="property-bio">
+
+                        Different shop Sizes available for rent
+
+                    </div>
+                    <div class="property-geo">
+
+                        <div class="location"><i class="fa-solid fa-location-dot "></i> <span>transekulu,Enugu</span>
+                        </div>
+                        <div class="sqm">70 sq. meters
+                        </div>
+
+                    </div>
+                    <div class="property-bill">
+
+                        <div class="price">
+                            N500,000
+                        </div>
+                        <div class="view">
+                            <a href="">View Property</a>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+
+        </section>
+
+        <section class="ads">
+            <article>
+                <h1>
+                    a partnership that works
+                </h1>
+            </article>
+        </section>
+
+        <section class="building-materials">
+            <article class="build-head">
+                <small>
+                    Featured Building Materials
+                </small>
+                <h2>
+                    Discover our available building materials
+                </h2>
+            </article>
+            <section class="build-details">
+                <article>
+
+                    <div class="build-img slider">
+
+                        <div class="slides">
+                            <img src="img/Black single door.jpeg" class="active" alt="">
+                            <img src="img/cream double door.jpeg" alt="">
+                            <img src="img/cream-single door.jpeg" alt="">
+                            <img src="img/wood door.jpeg" alt="">
+                            <img src="img/Black Door II.jpeg" alt="">
+                            <img src="img/Toilet Door.jpeg" alt="">
+                            <img src="img/wood door.jpeg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="build-title">
+
+                        Luxury Foreign Doors
+
+                    </div>
+                    <div class="build-bio">
+
+                        For your luxury finishing with our Quality Foreign Doors
+
+                    </div>
+
+                    <div class="build-bill">
+
+                        <div class="price">
+                            Ranges from <br>N110,000 - N700,000
+                        </div>
+                        <div class="buy">
+                            <a href=""> Buy</a>
+                        </div>
+
+                    </div>
+                </article>
+                <article>
+                    <div class="build-img slider">
+
+                        <div class="slides">
+                            <img src="img/Chandalier 4.jpeg" class="active" alt="">
+                            <img src="img/Chandalier 2.jpeg" alt="">
+                            <img src="img/Chandalier 3.jpeg" alt="">
+                            <img src="img/Ceiling Light 4.jpeg" alt="">
+                            <img src="img/Ceiling Light 3.jpeg" alt="">
+                            <img src="img/Chandalier 1.jpeg" alt="">
+                            <img src="img/Ceiling Light 1.jpeg" alt="">
+                            <img src="img/Stage Light 2.jpeg" alt="">
+                            <img src="img/Stage Light 1.jpeg" alt="">
+                            <img src="img/Led Light 2.jpeg" alt="">
+                            <img src="img/Led Light 1.jpeg" alt="">
+                            
+                            
+                        </div>
+
+                    </div>
+                    <div class="build-title">
+
+                        Luxury Foreign Lights
+
+                    </div>
+                    <div class="build-bio">
+
+                        For your High Quality standard Luxurious Lighthings
+                    </div>
+
+                    <div class="build-bill">
+
+                        <div class="price">
+                            Ranges from <br> N800 - N200,000
+                        </div>
+                        <div class="buy">
+                            <a href=""> Buy</a>
+                        </div>
+
+                    </div>
+                </article>
+                <article>
+                    <div class="build-img slider">
+
+                        <div class="slides">
+                            <img src="img/Toilet 1.jpeg" class="active" alt="">
+                            <img src="img/Brimix shower set.jpeg" alt="">
+                            <img src="img/Basin Mixer.jpeg" alt="">
+                            <img src="img/Long Neck Tap.jpeg" alt="">
+                            <img src="img/Toilet 2.jpeg" alt="">
+                            <img src="img/Shower beam.jpeg" alt="">
+                            <img src="img/Shower head.jpeg" alt="">
+                            <img src="img/Shower tap.jpeg" alt="">
+                            <img src="img/Pipe2.jpeg" alt="">
+                            <img src="img/Sanitary wears.jpeg" alt="">
+                            
+                        </div>
+
+                    </div>
+                    <div class="build-title">
+
+                        High Quality Plumbings
+
+                    </div>
+                    <div class="build-bio">
+
+                        For your Top-notch Quality Plumbing materials
+
+                    </div>
+
+                    <div class="build-bill">
+
+                        <div class="price">
+                            Ranges from <br>N4,000 - N20,000
+                        </div>
+                        <div class="buy">
+                            <a href=""> Buy</a>
+                        </div>
+
+                    </div>
+                </article>
+            </section>
+
+
+        </section>
+
+        <section class="service">
+            <article class="service-head">
+                <small>
+                    Our Services
+                </small>
+                <h2>
+                    How can we help
+                </h2>
+            </article>
+            <article class="service-details">
+                <p>
+                    We offer a wide range of services to meet your real estate needs, including property management,
+                    real estate investment consulting, land acquisition, and property valuation. Our team of experts is
+                    dedicated to providing personalized solutions that help you achieve your goals and maximize the
+                    value of your investments. Whether you're looking to buy, sell, or manage a property, we have the
+                    expertise and resources to guide you every step of the way.
+
+                </p>
+                <div class="service-img">
+                    <img src="img/Terracore Banner.jpeg" alt="">
+                </div>
+            </article>
+        </section>
+
+        <section class="certified">
+            <article class="certified-img">
+                <img src="img/Terracore flyer.PNG" alt="">
+                <!-- This is for your certificate, design on a single page and upload image directly -->
+            </article>
+
+        </section>
+
+        <section class="review">
+            <article class="review-head">
+                <small>
+                    Testimonial
+                </small>
+                <h2>
+                    What do our clients have to say about us
+                </h2>
+            </article>
+
+            <section class="review-details">
+                <article class="review-wrapper">
+                    <p>
+                        'I had a seamless and professional experience with TerraCore and their team. They efficiently
+                        leased
+                        out my unit, and their communication throughout the process was excellent. I highly recommend
+                        them to anyone looking for reliable and expert service
+                    </p>
+                    <article class="review-profile  fa-one">
+                        <div class="profile-pic1">
+                            <!-- <img src="img/IMG-20250113-WA0001.jpg" alt=""> -->
+                            <!-- I used background image instead , edit from there -->
+
+                        </div>
+                        <div class="profile-name">
+                            <p>
+                                mr. Antony
+                            </p>
+                            <!-- relevanvce to the company as -->
+                            <small>
+                                Client
+                            </small>
+                        </div>
+                    </article>
+                </article>
+
+                <article class="review-wrapper">
+                    <p>
+                        Finding the right home in Lagos can be overwhelming, but TerraCore made it so easy. They
+                        listened to
+                        my preferences and found me a property that exceeded my expectations. Their professionalism and
+                        attention to detail were top-notch. I felt like I was their top priority throughout the process
+                    </p>
+                    <article class="review-profile fa-two">
+                        <div class="profile-pic2">
+                            <!-- <img src="img/IMG-20250113-WA0001.jpg" alt=""> -->
+                            <!-- I used background image instead , edit from there -->
+
+                        </div>
+                        <div class="profile-name">
+                            <p>
+                                Mr. Avih
+                            </p>
+                            <!-- relevanvce to the company as -->
+                            <small>
+                                Property Investor
+                            </small>
+                        </div>
+                    </article>
+                </article>
+                <article class="review-wrapper">
+                    <p>
+                        TerraCore Solutions provided an accurate and detailed valuation for my property,
+                        giving me the confidence I needed to make informed decisions. Their expertise and
+                        professionalism were evident from start to finish. I’d gladly recommend their valuation services
+                        to anyone in need, they are the best.
+                    </p>
+                    <article class="review-profile fa-three">
+                        <div class="profile-pic3">
+                            <!-- <img src="img/IMG-20250113-WA0001.jpg" alt=""> -->
+                            <!-- I used background image instead , edit from there -->
+
+                        </div>
+                        <div class="profile-name">
+                            <p>
+                                mr. Martins
+                            </p>
+                            <!-- relevanvce to the company as -->
+                            <small>
+                                Road Constructor
+                            </small>
+                        </div>
+                    </article>
+                </article>
+                <article class="review-wrapper">
+                    <p>
+                        'I had a seamless and professional experience with TerraCore and their team. They efficiently
+                        leased
+                        out my unit, and their communication throughout the process was excellent. I highly recommend
+                        them to anyone looking for reliable and expert service
+                    </p>
+                    <article class="review-profile fa-four">
+                        <div class="profile-pic4">
+                            <!-- <img src="img/IMG-20250113-WA0001.jpg" alt=""> -->
+                            <!-- I used background image instead , edit from there -->
+
+                        </div>
+                        <div class="profile-name">
+                            <p>
+                                mr. Stonez
+                            </p>
+                            <!-- relevanvce to the company as -->
+                            <small>
+                                Client
+                            </small>
+                        </div>
+                    </article>
+                </article>
+            </section>
+
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="contact-wrap">
+                <!-- contact form on the LEFT -->
+                <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
+                    <div class="form-row">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@domain.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" type="tel" placeholder="(+234) 812 345 6789">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input id="subject" name="subject" type="text" placeholder="Subject" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="How can we help?"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Send Message</button>
+                        <button type="reset" class="btn ghost">Reset</button>
+                    </div>
+
+                    <p class="form-note" aria-hidden="true" hidden id="formNote">Thank you — your message has been
+                        received.</p>
+                </form>
+
+                <!-- contact info on the RIGHT with icons -->
+                <div class="contact-info-panel">
+                    <h4 class="contact-label">Contact us</h4>
+                    <h2>Get in touch</h2>
+                    <p>Questions about properties, building materials or services? Send us a message and we'll respond
+                        within 24 hours.
+                    </p>
+
+                    <div class="office">
+                        <h3 style="color: #27ae60;">Head Office</h3>
+                        <address>
+                            <i class="fa-solid fa-location-dot" style="color: red;"></i>
+                            No 10 RCC Main Gate, Opposite EEDC Office,<br>
+                            Enugu-Onitsha Expressway, Transekulu, Enugu State
+                        </address>
+                        <p>
+                            <strong><span><i class="fa-solid fa-phone" style="color: #27ae60;"></i>
+                                </span>Phone:</strong> +234 814 874 2229
+                            <br>
+                            <i class="fa-solid fa-envelope" style="color: #27ae60;"></i> <strong>Email:</strong>
+                            info@eloke.co
+                        </p>
+                        <div class="contact-hours"><i class="fa-solid fa-clock" style="color: #27ae60;"></i> Mon - Fri:
+                            9:00 - 17:00
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-col about">
+                    <img src="img/favicon.png" alt="Eloke logo" class="footer-logo" width="120">
+                    <p><span style="color: #27ae60;">TerraCore Solutions</span> — secure land and property solutions,
+                        building value and creating opportunities across Nigeria.</p>
+                </div>
+
+                <div class="footer-col links">
+                    <h4 style="color: #27ae60;">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="property.html">Properties</a></li>
+                        <li><a href="building-materials.html">Building materials</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle" aria-hidden="false">
+                        <button id="btnDark" class="btn small" aria-label="Dark theme"><i
+                                class="fa-solid fa-moon"></i></button>
+                        <button id="btnLight" class="btn small" aria-label="Light theme"><i
+                                class="fa-solid fa-sun"></i></button>
+                    </div>
+
+                </div>
+
+                <div class="footer-col newsletter">
+                    <h4 style="color: #27ae60;">Newsletter</h4>
+                    <p>Get updates on new properties and offers.</p>
+                    <form class="newsletter-form" action="#" method="post">
+                        <input type="email" name="nl-email" placeholder="Your email" required>
+                        <button class="btn small" type="submit">Subscribe</button>
+                    </form>
+                    <div class="social">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>&copy; <span id="year"></span> TerraCore Solutions . All rights reserved.</p>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

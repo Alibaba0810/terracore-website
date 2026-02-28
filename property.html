@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Properties — Terracore Solutions</title>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="property.css">
+    <link rel="stylesheet" href="propertyQuery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body id="body">
+    <header>
+        <h1>
+            <img src="img/favicon.png" alt="" width="180" height="85">
+        </h1>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="property.html" aria-current="page">Properties</a></li>
+                <li><a href="building-materials.html">Building materials</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+
+        </nav>
+
+        <button class="menu-bar" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <aside id="sidebar" class="sidebar" role="navigation" aria-hidden="true">
+            <button class="close-btn" id="sidebarClose" aria-label="Close menu">
+                <i class="fa fa-times"></i>
+            </button>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="property.html">Properties</a></li>
+                <li><a href="building-materials.html">Building materials</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </aside>
+        <div id="overlay" class="overlay" hidden></div>
+    </header>
+
+    <main class="page-wrap">
+        <!-- Featured carousel -->
+        <section class="hero">
+            <div class="carousel" id="heroCarousel">
+                <div class="carousel-track">
+                    <figure class="carousel-item active" data-index="0">
+                        <img src="img/property3.png" alt="Featured 1">
+                        <a href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20the%205-bed%20duplex" target="_blank" rel="noopener" class="carousel-link"></a>
+                        <figcaption>
+                            <h2>Luxury 5-Bed Duplex — Transekulu</h2>
+                            <p>Click to learn more</p>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20the%205-bed%20duplex"
+                                target="_blank" rel="noopener">Learn via WhatsApp</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel-item" data-index="1">
+                        <img src="img/shops.jpg" alt="Featured 2">
+                        <a href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20the%20shop%20space" target="_blank" rel="noopener" class="carousel-link"></a>
+                        <figcaption>
+                            <h2>Prime Shop Space — City Centre</h2>
+                            <p>Click to learn more</p>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20the%20shop%20space"
+                                target="_blank" rel="noopener">Learn via WhatsApp</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel-item" data-index="2">
+                        <img src="img/sideview.jpg" alt="Featured 3">
+                        <a href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20land%20parcels" target="_blank" rel="noopener" class="carousel-link"></a>
+                        <figcaption>
+                            <h2>Land Parcels — Onitsha Expressway</h2>
+                            <p>Click to learn more</p>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20land%20parcels"
+                                target="_blank" rel="noopener">Learn via WhatsApp</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <button class="carousel-prev" aria-label="Previous">&#10094;</button>
+                <button class="carousel-next" aria-label="Next">&#10095;</button>
+                <div class="carousel-dots" aria-label="Carousel navigation"></div>
+            </div>
+        </section>
+
+        <!-- Section 1: Land properties for sale or rent -->
+        <section class="properties-section" id="land">
+            <header class="section-head">
+                <small>Land</small>
+                <h2>Land Properties — Sale & Rent</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/house1.png" alt="Land 1">
+                    <div class="card-body">
+                        <h3>5 Plots — Harmony Estate</h3>
+                        <p>Prime roadside parcels near utilities. Title: Government Allocation</p>
+                        <div class="meta">Price: N25,500,000 / plot</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20tell%20me%20about%205%20plots%20in%20Transekulu"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/house2.png" alt="Land 2">
+                    <div class="card-body">
+                        <h3>10 Acres — Agbogazi Nike</h3>
+                        <p>Suitable for estate development or agriculture.</p>
+                        <div class="meta">Price: Contact</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%2010%20acres"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/property3.png" alt="Land 3">
+                    <div class="card-body">
+                        <h3>Corner Plot — Blossom Gardens Estate</h3>
+                        <p>High footfall location, ideal for mixed-use building.</p>
+                        <div class="meta">Price: N10,000,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20corner%20plot%20in%20city"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Yearly rented bungalows & duplexes -->
+        <section class="properties-section" id="yearly">
+            <header class="section-head">
+                <small>Rented</small>
+                <h2>Yearly Rented — Bungalows & Duplexes</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/house2.png" alt="1-Bed Bungalow">
+                    <div class="card-body">
+                        <h3>4-Bed Bungalow — Transekulu</h3>
+                        <p>Cozy bungalow with fence and parking.</p>
+                        <div class="meta">Yearly: N3,500,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%201-bed%20bungalow%20rental"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/house1.png" alt="3-Bed Duplex">
+                    <div class="card-body">
+                        <h3>3-Bed Duplex — Golf Estate</h3>
+                        <p>Modern finishes and gated community.</p>
+                        <div class="meta">Yearly: N10,800,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%203-bed%20duplex%20rental"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/property3.png" alt="2-Bed Bungalow">
+                    <div class="card-body">
+                        <h3>2-Bed Bungalow — New Artisian</h3>
+                        <p>Spacious compound with security gate.</p>
+                        <div class="meta">Yearly: N1,200,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%202-bed%20bungalow%20rental"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: Properties for Sale - Bungalows & Duplexes -->
+        <section class="properties-section" id="sale">
+            <header class="section-head">
+                <small>For Sale</small>
+                <h2>Properties for Sale — Bungalows & Duplexes</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/house2.png" alt="4-Bed Duplex">
+                    <div class="card-body">
+                        <h3>4-Bed Duplex — Transekulu</h3>
+                        <p>Luxury finishing with boys' quarter.</p>
+                        <div class="meta">Price: N45,000,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%204-bed%20duplex%20sale"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/house1.png" alt="3-Bed Bungalow">
+                    <div class="card-body">
+                        <h3>3-Bed Bungalow — Enugu</h3>
+                        <p>Newly built with modern amenities.</p>
+                        <div class="meta">Price: N25,000,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%203-bed%20bungalow%20sale"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/property3.png" alt="5-Bed Duplex">
+                    <div class="card-body">
+                        <h3>5-Bed Duplex — City Centre</h3>
+                        <p>Premium location with ample parking.</p>
+                        <div class="meta">Price: N65,000,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%205-bed%20duplex"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 4: Commercial Properties -->
+        <section class="properties-section" id="commercial">
+            <header class="section-head">
+                <small>Commercial</small>
+                <h2>Commercial Properties — Shops & Offices</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="img/shops.jpg" alt="Shop Space">
+                    <div class="card-body">
+                        <h3>Shop Space — City Centre</h3>
+                        <p>High foot traffic location, ideal for retail.</p>
+                        <div class="meta">Yearly: N600,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20shop%20space%20rental"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/sideview.jpg" alt="Office Space">
+                    <div class="card-body">
+                        <h3>Office Space — Business District</h3>
+                        <p>Modern office complex with parking.</p>
+                        <div class="meta">Yearly: N1,000,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20office%20space%20rental"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/property3.png" alt="Warehouse">
+                    <div class="card-body">
+                        <h3>Warehouse — Industrial Area</h3>
+                        <p>Spacious storage facility with loading bay.</p>
+                        <div class="meta">Yearly: N3,000,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20warehouse%20rental"
+                            target="_blank" rel="noopener">Learn more</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact anchor -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Eloke</h2>
+            <p>Questions about any property? Use the WhatsApp button to start a chat immediately.</p>
+        </section>
+
+        <!-- List your property (user submissions) -->
+        <section id="list-property" class="list-property-section">
+            <header class="section-head">
+                <small>List</small>
+                <h2>List Your Property — Submit for Approval</h2>
+            </header>
+            <div class="list-wrap">
+                <form id="listForm" class="list-form">
+                    <div class="form-row">
+                        <label for="propTitle">Property Title</label>
+                        <input id="propTitle" name="propTitle" type="text" required placeholder="e.g. 4-Bed Duplex — Enugu">
+                    </div>
+                    <div class="form-row">
+                        <label for="propType">Property Type</label>
+                        <select id="propType" name="propType">
+                            <option>Land</option>
+                            <option>Bungalow</option>
+                            <option>Duplex</option>
+                            <option>Shop</option>
+                            <option>Office</option>
+                            <option>Warehouse</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="listingType">Listing Type</label>
+                        <select id="listingType" name="listingType">
+                            <option>For Sale</option>
+                            <option>For Rent</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="location">Location</label>
+                        <input id="location" name="location" type="text" placeholder="Town, State" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="price">Price / Terms</label>
+                        <input id="price" name="price" type="text" placeholder="e.g. N25,000,000 or N600,000/year">
+                    </div>
+                    <div class="form-row">
+                        <label for="contactName">Your Name</label>
+                        <input id="contactName" name="contactName" type="text" placeholder="Your full name">
+                    </div>
+                    <div class="form-row">
+                        <label for="contactPhone">Contact Phone</label>
+                        <input id="contactPhone" name="contactPhone" type="tel" placeholder="+2348123456789">
+                    </div>
+                    <div class="form-row">
+                        <label for="imageUrl">Image URL</label>
+                        <input id="imageUrl" name="imageUrl" type="url" placeholder="img/your-image.jpg">
+                    </div>
+                    <div class="form-row">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Short description"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Request Approval (WhatsApp)</button>
+                        <button type="reset" class="btn ghost">Reset</button>
+                    </div>
+                </form>
+
+                <div class="user-listings">
+                    <!-- Submitted listings will appear here with 'Pending' status -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col about">
+                <img src="img/favicon.png" alt="Eloke logo" class="footer-logo" width="120">
+                <p>Terracore Solution — secure land and property solutions, building value and creating opportunities across Nigeria.</p>
+            </div>
+
+            <div class="footer-col links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="property.html">Properties</a></li>
+                    <li><a href="building-materials.html">Building materials</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle" aria-hidden="false">
+                    <button id="btnDark" class="btn small" aria-label="Dark theme"><i class="fas fa-moon"></i></button>
+                    <button id="btnLight" class="btn small" aria-label="Light theme"><i class="fas fa-sun"></i></button>
+                </div>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h4>Newsletter</h4>
+                <p>Get updates on new properties and offers.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="nl-email" placeholder="Your email" required>
+                    <button class="btn small" type="submit">Subscribe</button>
+                </form>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <p>&copy; <span id="year"></span> Eloke Multi-Purpose Cooperative Society. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <!-- theme buttons moved under Quick Links -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp contact -->
+    <a class="whatsapp-float" href="https://wa.me/2348148742229?text=Hello%20Terracore%2C%20I%27d%20like%20to%20inquire%20about%20your%20properties" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+    
+</body>
+
+</html>

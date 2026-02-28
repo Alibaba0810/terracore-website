@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Building Materials —Terracore Solutions</title>
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="building-materials.css">
+    <link rel="stylesheet" href="mainQuery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            <img src="/img/favicon.png" alt="" width="180" height="85">
+        </h1>
+        <nav>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="property.html">Properties</a></li>
+                <li><a href="building-materials.html" aria-current="page">Building materials</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+
+        </nav>
+
+        <button class="menu-bar" id="menuToggle" aria-controls="sidebar" aria-expanded="false" aria-label="Open menu">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <aside id="sidebar" class="sidebar" role="navigation" aria-hidden="true">
+            <button class="close-btn" id="sidebarClose" aria-label="Close menu">
+                <i class="fa fa-times"></i>
+            </button>
+            <ul class="sidebar-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="property.html">Properties</a></li>
+                <li><a href="building-materials.html">Building materials</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </aside>
+        <div id="overlay" class="overlay" hidden></div>
+    </header>
+
+    <main class="page-wrap">
+        <!-- Featured carousel -->
+        <section class="hero">
+            <div class="carousel" id="heroCarousel">
+                <div class="carousel-track">
+                    <figure class="carousel-item">
+                        <img src="/img/property3.png" alt="Featured 1">
+                        <figcaption>
+                            <h2>Premium Cement — High Quality</h2>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20premium%20cement"
+                                target="_blank" rel="noopener">Click here to buy</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel-item">
+                        <img src="/img/shops.jpg" alt="Featured 2">
+                        <figcaption>
+                            <h2>Imported Doors — Durable</h2>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20imported%20bricks"
+                                target="_blank" rel="noopener">Click here to buy</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="carousel-item">
+                        <img src="/img/sideview.jpg" alt="Featured 3">
+                        <figcaption>
+                            <h2>Marble Tiles — Elegant</h2>
+                            <a class="btn learn"
+                                href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20marble%20tiles"
+                                target="_blank" rel="noopener">Click here to buy</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <button class="carousel-prev" aria-label="Previous">‹</button>
+                <button class="carousel-next" aria-label="Next">›</button>
+            </div>
+            <div class="carousel-dots"></div>
+        </section>
+
+        <!-- Section 1: Cement & Aggregates -->
+        <section class="properties-section" id="cement">
+            <header class="section-head">
+                <small>Cement</small>
+                <h2>Cement & Aggregates</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="/img/house1.png" alt="Portland Cement">
+                    <div class="card-body">
+                        <h3>Unicem Cement — 50kg Bag</h3>
+                        <p>High-strength cement for construction.</p>
+                        <div class="meta">Price: N4,500 / bag</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20tell%20me%20about%20Portland%20cement"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/house2.png" alt="Sand">
+                    <div class="card-body">
+                        <h3>Fine Sand — Per Ton</h3>
+                        <p>Clean river sand for plastering and masonry.</p>
+                        <div class="meta">Price: N25,000 / ton</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20fine%20sand"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/property3.png" alt="Gravel">
+                    <div class="card-body">
+                        <h3>Gravel and chippings — Per Ton</h3>
+                        <p>Crushed stone for concrete and foundations.</p>
+                        <div class="meta">Price: N30,000 / ton</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20gravel"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Bricks & Blocks -->
+        <section class="properties-section" id="bricks">
+            <header class="section-head">
+                <small>Doors</small>
+                <h2> Keys & locks</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="/img/wood door.jpeg" alt="Red Bricks">
+                    <div class="card-body">
+                        <h3>Foerign Wood Door — 4ft x 7ft</h3>
+                        <p>Luxury Quality Doors for your buildings.</p>
+                        <div class="meta">Price: N180,000 </div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20red%20clay%20bricks"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/house1.png" alt="Concrete Blocks">
+                    <div class="card-body">
+                        <h3>Quality Fire-proof Doors — 5.5ft x 7ft </h3>
+                        <p>Luxury durable Doors for faster and quality building.</p>
+                        <div class="meta">Price: N200 / block</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20concrete%20blocks"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/IMG-20250113-WA0001.jpg" alt="Hollow Blocks">
+                    <div class="card-body">
+                        <h3>Automatic Locks </h3>
+                        <p>Luxury Security Auto Door Locks made just for you.</p>
+                        <div class="meta">Price: N250,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20hollow%20blocks"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: Roofing Materials -->
+        <section class="properties-section" id="roofing">
+            <header class="section-head">
+                <small>Roofing</small>
+                <h2>Roofing Materials</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="/img/shops.jpg" alt="Corrugated Sheets">
+                    <div class="card-body">
+                        <h3>Corrugated Iron Sheets — Per Sheet</h3>
+                        <p>Durable roofing sheets for residential and commercial use.</p>
+                        <div class="meta">Price: N5,000 / sheet</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20corrugated%20iron%20sheets"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/property3.png" alt="Roofing Nails">
+                    <div class="card-body">
+                        <h3>Roofing Nails — Per Kg</h3>
+                        <p>Galvanized nails for secure roofing installation.</p>
+                        <div class="meta">Price: N800 / kg</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20roofing%20nails"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/sideview.jpg" alt="Gutters">
+                    <div class="card-body">
+                        <h3>PVC Gutters — Per Meter</h3>
+                        <p>Waterproof gutters for effective drainage.</p>
+                        <div class="meta">Price: N1,200 / meter</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20PVC%20gutters"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 4: Plumbing Supplies -->
+        <section class="properties-section" id="plumbing">
+            <header class="section-head">
+                <small>Plumbing</small>
+                <h2>Plumbing Supplies</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="/img/house1.png" alt="PVC Pipes">
+                    <div class="card-body">
+                        <h3>PVC Pipes — Per Meter</h3>
+                        <p>Flexible pipes for water supply and drainage.</p>
+                        <div class="meta">Price: N500 / meter</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20tell%20me%20about%20PVC%20pipes"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/house2.png" alt="Fittings">
+                    <div class="card-body">
+                        <h3>Pipe Fittings — Various Sizes</h3>
+                        <p>Elbows, tees, and connectors for plumbing systems.</p>
+                        <div class="meta">Price: N200 - N1,000</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20pipe%20fittings"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/logo.png" alt="Taps">
+                    <div class="card-body">
+                        <h3>Water Taps — Brass</h3>
+                        <p>High-quality brass taps for kitchens and bathrooms.</p>
+                        <div class="meta">Price: N3,000 / piece</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20brass%20water%20taps"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 5: Electrical Materials -->
+        <section class="properties-section" id="electrical">
+            <header class="section-head">
+                <small>Electrical</small>
+                <h2>Electrical Materials</h2>
+            </header>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="/img/property3.png" alt="Wiring Cables">
+                    <div class="card-body">
+                        <h3>Electrical Cables — Per Meter</h3>
+                        <p>Copper wiring for safe electrical installations.</p>
+                        <div class="meta">Price: N300 / meter</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20electrical%20cables"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/shops.jpg" alt="Switches">
+                    <div class="card-body">
+                        <h3>Switches & Sockets — Set</h3>
+                        <p>Modern switches and sockets for home wiring.</p>
+                        <div class="meta">Price: N1,500 / set</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20details%20on%20switches%20and%20sockets"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="/img/sideview.jpg" alt="Bulbs">
+                    <div class="card-body">
+                        <h3>LED Bulbs — Energy Efficient</h3>
+                        <p>Long-lasting LED bulbs for lighting.</p>
+                        <div class="meta">Price: N2,000 / bulb</div>
+                        <a class="btn learn"
+                            href="https://wa.me/2348148742229?text=Hi%20Eloke%2C%20I%27m%20interested%20in%20LED%20bulbs"
+                            target="_blank" rel="noopener">Click here to buy</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact anchor -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Eloke</h2>
+            <p>Questions about any building material? Use the WhatsApp button to start a chat immediately.</p>
+        </section>
+
+        <!-- List your material (user submissions) -->
+        <section id="list-material" class="list-property-section">
+            <header class="section-head">
+                <small>List</small>
+                <h2>List Your Building Material — Submit for Approval</h2>
+            </header>
+            <div class="list-wrap">
+                <form id="listForm" class="list-form">
+                    <div class="form-row">
+                        <label for="matTitle">Material Title</label>
+                        <input id="matTitle" name="matTitle" type="text" required
+                            placeholder="e.g. Custom Doors — Wooden">
+                    </div>
+                    <div class="form-row">
+                        <label for="matType">Material Type</label>
+                        <select id="matType" name="matType">
+                            <option>Cement</option>
+                            <option>Bricks</option>
+                            <option>Roofing</option>
+                            <option>Plumbing</option>
+                            <option>Electrical</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="location">Location</label>
+                        <input id="location" name="location" type="text" placeholder="Town, State" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="price">Price / Terms</label>
+                        <input id="price" name="price" type="text" placeholder="e.g. N10,000 or Contact">
+                    </div>
+                    <div class="form-row">
+                        <label for="contactName">Your Name</label>
+                        <input id="contactName" name="contactName" type="text" placeholder="Your full name">
+                    </div>
+                    <div class="form-row">
+                        <label for="contactPhone">Contact Phone</label>
+                        <input id="contactPhone" name="contactPhone" type="tel" placeholder="+2348123456789">
+                    </div>
+                    <div class="form-row">
+                        <label for="imageUrl">Image URL</label>
+                        <input id="imageUrl" name="imageUrl" type="url" placeholder="/img/your-image.jpg">
+                    </div>
+                    <div class="form-row">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4"
+                            placeholder="Short description"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn">Request Approval (WhatsApp)</button>
+                        <button type="reset" class="btn ghost">Reset</button>
+                    </div>
+                </form>
+
+                <div class="user-listings">
+                    <!-- Submitted listings will appear here with 'Pending' status -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer (copied from index.html for consistent site footer) -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-col about">
+                <img src="/img/favicon.png" alt="Eloke logo" class="footer-logo" width="120">
+                <p>Terracore Solutions — secure land and property solutions, building
+                    value and creating opportunities across Nigeria.</p>
+            </div>
+
+            <div class="footer-col links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="property.html">Properties</a></li>
+                    <li><a href="building-materials.html">Building materials</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-toggle" aria-hidden="false">
+                    <button id="btnDark" class="btn small" aria-label="Dark theme"><i
+                            class="fa-solid fa-moon"></i></button>
+                    <button id="btnLight" class="btn small" aria-label="Light theme"><i
+                            class="fa-solid fa-sun"></i></button>
+                </div>
+            </div>
+
+            <div class="footer-col newsletter">
+                <h4>Newsletter</h4>
+                <p>Get updates on new materials and offers.</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="nl-email" placeholder="Your email" required>
+                    <button class="btn small" type="submit">Subscribe</button>
+                </form>
+                <div class="social">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <p>&copy; <span id="year"></span> Eloke Multi-Purpose Cooperative Society. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <!-- theme buttons moved under Quick Links -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp contact -->
+    <a class="whatsapp-float"
+        href="https://wa.me/2348148742229?text=Hello%20Terracore%2C%20I%27d%20like%20to%20inquire%20about%20your%20building%20materials"
+        target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
