@@ -1,5 +1,16 @@
 @media (min-width: 320px) and (max-width: 900px) {
 
+    /* DISABLE SCROLL REVEAL ON MOBILE - This was hiding content */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .reveal.visible {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
     * {
         margin: 0;
         padding: 0;
