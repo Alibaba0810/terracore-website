@@ -415,19 +415,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Scroll reveal using IntersectionObserver
-  const revealSelector = ['section:not(.carousel-section)', '.property-details article', '.review-wrapper', '.build-details article', '.about', '.carousel-text'].join(',');
-  const revealNodes = Array.from(document.querySelectorAll(revealSelector));
-  revealNodes.forEach(n => n.classList.add('reveal'));
-  const revealObserver = new IntersectionObserver((entries, obs) => {
-    entries.forEach(en => {
-      if (en.isIntersecting) {
-        en.target.classList.add('visible');
-        obs.unobserve(en.target);
-      }
+  // Scroll reveal using IntersectionObserver - DISABLED ON MOBILE
+  // Check if device is mobile (screen width < 900px)
+  const isMobile = window.innerWidth < 900;
+  
+  if (!isMobile) {
+    // Only apply scroll reveal on desktop
+    const revealSelector = ['section:not(.carousel-section)', '.property-details article', '.review-wrapper', '.build-details article', '.about', '.carousel-text'].join(',');
+    const revealNodes = Array.from(document.querySelectorAll(revealSelector));
+    revealNodes.forEach(n => n.classList.add('reveal'));
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.classList.add('visible');
+          obs.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealNodes.forEach(n => revealObserver.observe(n));
+  } else {
+    // On mobile, ensure all sections are visible immediately
+    const revealSelector = ['section:not(.carousel-section)', '.property-details article', '.review-wrapper', '.build-details article', '.about', '.carousel-text'].join(',');
+    const revealNodes = Array.from(document.querySelectorAll(revealSelector));
+    revealNodes.forEach(n => {
+      n.classList.add('reveal', 'visible');
     });
-  }, { threshold: 0.12 });
-  revealNodes.forEach(n => revealObserver.observe(n));
+  }
 
   // Simple image lightbox for property images
   function openImageModal(src, alt) {
