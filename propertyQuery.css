@@ -15,59 +15,89 @@
 
     /* Page wrap container - ensure it's visible */
     .page-wrap {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0 12px;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 12px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Main element styling */
+    main.page-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 12px !important;
+        display: block !important;
     }
 
     /* Hero/Carousel section */
     .hero {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .hero .carousel {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .hero .carousel-track {
+        display: flex !important;
     }
 
     .hero .carousel-item {
-        width: 100%;
+        width: 100% !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .hero .carousel-item img {
-        width: 100%;
-        height: 35vh;
-        object-fit: cover;
+        width: 100% !important;
+        height: 35vh !important;
+        object-fit: cover !important;
     }
 
     .hero .carousel-item figcaption {
-        max-width: 90%;
-        left: 5%;
-        bottom: 8%;
-        padding: 12px 16px;
+        max-width: 90% !important;
+        left: 5% !important;
+        bottom: 8% !important;
+        padding: 12px 16px !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .hero .carousel-item figcaption h2 {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
 
     .hero .carousel-item figcaption p {
-        font-size: 0.85rem;
+        font-size: 0.85rem !important;
     }
 
     /* Ensure all sections are visible */
     .properties-section,
     .contact-section,
     .list-property-section {
-        width: 100%;
-        max-width: 100%;
-        visibility: visible;
-        opacity: 1;
+        width: 100% !important;
+        max-width: 100% !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        display: block !important;
+        margin: 20px 0 !important;
     }
 
     /* Section headers */
@@ -670,7 +700,8 @@
         text-align: center;
         margin: 0;
     }
-     /* Base footer styles */
+
+    /* Base footer styles */
     .site-footer {
         background: #0b0b0b;
         color: #fff;
